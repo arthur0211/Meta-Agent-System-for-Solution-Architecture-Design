@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "mass-das"
+version = "0.1.0"
+description = "MASS-DAS - Sistema Meta-Agente para Arquitetura de Soluções"
+authors = ["Equipe MASS <equipe@mass.com>"]
+license = "Apache License 2.0"
+readme = "README.md"
+package-mode = true
+
+[tool.poetry.dependencies]
+python = "^3.12"
+google-adk = "^1.0.0"
+python-dotenv = "^1.0.1"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-asyncio = "^0.26.0"
+
+[tool.pytest.ini_options]
+console_output_style = "progress"
+addopts = "-vv -s"
+testpaths = ["tests/"]
+log_level = "DEBUG"
+log_cli = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
